@@ -1,14 +1,19 @@
 package com.burnie.entity;
 
+import lombok.Data;
+
 /**
  * Created by liangboning on 2019/7/9.
  */
+@Data
 public class City {
 
     private Long id;
 
     private String name;
 
-    private double currentKilometer;
+    private Long currentmeter;
+
+    private String cityCode;
 
 }

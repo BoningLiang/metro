@@ -1,20 +1,28 @@
 package com.burnie.entity;
 
+import lombok.Data;
+
 import java.time.LocalDate;
+import java.util.UUID;
 
 /**
  * Created by liangboning on 2019/7/9.
  */
+@Data
 public class Volume {
 
-    private Long id;
+    public Volume() {
+        this.id = UUID.randomUUID().toString().replaceAll("-", "");
+    }
+
+    private String id;
 
     private LocalDate date;
 
-    private double volume;
+    private Long volume;
 
-    private double kilometer;
+    private Long meters;
 
-    private Long cityId;
+    private Long cityid;
 
 }
